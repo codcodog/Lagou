@@ -1,4 +1,4 @@
-#!/usr/local/nginx/html/spider/venv/bin/python3.5
+#!/home/cryven/Lagou/venv/bin/python
 
 # -*- coding: utf-8 -*-
 import re
