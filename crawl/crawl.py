@@ -99,7 +99,7 @@ class Crawl:
                 break
 
             for i in res['content']['positionResult']['result']:
-                data = '', district, i['salary'], i['workYear'], i['industryField']
+                data = district, '', i['salary'], i['workYear'], i['industryField']
                 result.put(data)
 
             page = page + 1
@@ -136,7 +136,7 @@ class Crawl:
                 break
 
             for i in res['content']['positionResult']['result']:
-                data = biz_area, district, i['salary'], i['workYear'], i['industryField']
+                data = district, biz_area, i['salary'], i['workYear'], i['industryField']
                 result.put(data)
 
             page = page + 1
