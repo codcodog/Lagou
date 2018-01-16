@@ -17,7 +17,7 @@ class Proxy:
         @param  爬取到proxy的总数
         '''
         self.proxy           = queue.Queue()
-        self.num             = 100
+        self.num             = 200
         self.available_proxy = queue.Queue()
         self.size            = 0
 
