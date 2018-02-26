@@ -46,4 +46,4 @@ $ source venv/bin/active
 ----
 从此次爬虫中, 遇到了一些常见的反爬虫策略, 对爬虫以及 `Python` 这门语言都有了深刻的认识.  
 
-附上数据分析的一个图表: [图表数据](http://65.49.200.193/lagou/analysis.php)
+附上数据分析的一个图表: [图表数据](http://lagou.codcodog.me)
