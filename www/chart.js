@@ -95,7 +95,7 @@ for (var i in industry) {
 
 option = {
     title: {
-        text: '行业职位发布情况',
+        text: '行业职位发布情况 (前30)',
         subtext: 'PHP'
     },
     tooltip: {
@@ -248,7 +248,7 @@ for (var i in data6) {
 
 option = {
     title: {
-        text: '行业工作年限职位发布情况',
+        text: '行业工作年限职位发布情况 (前30)',
         subtext: 'PHP'
     },
     tooltip: {
@@ -297,7 +297,7 @@ for (var i in data7) {
 
 option = {
     title: {
-        text: '行业工作年限薪资情况',
+        text: '行业工作年限薪资情况 (前30)',
         subtext: 'PHP'
     },
     tooltip: {

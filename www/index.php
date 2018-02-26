@@ -45,7 +45,7 @@ class Analysis
      */
     protected function industry_category()
     {
-        $sql  = "select `type`, count(*) as `total` from `lagou` group by `type` order by `total`";
+        $sql  = "select `type`, count(*) as `total` from `lagou` group by `type` order by `total` DESC limit 30";
         $st   = $this->db->query($sql);
 
         return $st->fetchAll();
@@ -75,7 +75,7 @@ class Analysis
      */
     protected function business()
     {
-        $sql = 'select `business`, count(*) as total from `lagou` group by `business` order by total DESC limit 30';
+        $sql = 'select `business`, count(*) as total from `lagou` where `business` != "" group by `business` order by total DESC limit 30';
         $st  = $this->db->query($sql, PDO::FETCH_ASSOC);
 
         return $st->fetchAll();
@@ -259,6 +259,7 @@ class Analysis
     protected function industryWorks()
     {
         $res      = $this->industry_category();
+        $res      = array_reverse($res);
         $industry = array_column($res, 'type');
 
         $age_type = $this->ageType();
@@ -296,6 +297,7 @@ class Analysis
     public function industry_salary()
     {
         $res      = $this->industry_category();
+        $res      = array_reverse($res);
         $industry = array_column($res, 'type');
 
         $age_type = $this->ageType();
@@ -347,7 +349,7 @@ class Analysis
     {
         $area_data     = json_encode($this->area());
         $business_data = json_encode($this->business());
-        $industry_data = json_encode($this->industry_category());
+        $industry_data = json_encode(array_reverse($this->industry_category()));
 
         list($age_type, $business, $data) = $this->business_age();
         $age_type                         = json_encode(array_keys($age_type));
